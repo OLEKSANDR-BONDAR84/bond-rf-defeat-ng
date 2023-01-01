@@ -1,218 +1,124 @@
 <!DOCTYPE html>
 <html>
-<body class="w3-light-grey">
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main">
-        <!-- Header -->
-        <header class="w3-container" style="padding-top:22px">
-            <h5><b><i class="fa fa-dashboard"></i> Протистояння України Російському вторгненню</b></h5>
-        </header>
 
-        <div class="w3-row-padding w3-margin-bottom">
-            <div class="w3-quarter">
-                <div class="w3-container w3-red w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.aircraft}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Aircraft</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-blue w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.helicopter}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Helicopter</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-teal w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.tank}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Tank</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-orange w3-text-white w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.apc}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>APC</h4>
-                </div>
-            </div>
-        </div>
-        <div class="w3-row-padding w3-margin-bottom">
-            <div class="w3-quarter">
-                <div class="w3-container w3-red w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.artillery}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Artillery</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-blue w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.mrl}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>MRL</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-teal w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.drone}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Drone</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-orange w3-text-white w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.ship}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Ship</h4>
-                </div>
-            </div>
-        </div>
+<body id="myPage">
 
-        <div class="w3-row-padding w3-margin-bottom">
-            <div class="w3-quarter">
-                <div class="w3-container w3-red w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.antiAircraft}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Anti Aircraft</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-blue w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.specialEquipment}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Special Equipment</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-teal w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{equipment.vehicles}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Vehicles</h4>
-                </div>
-            </div>
-            <div class="w3-quarter">
-                <div class="w3-container w3-orange w3-text-white w3-padding-16">
-                    <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-                    <div class="w3-right">
-                        <h3>{{personnel.personnel}}</h3>
-                    </div>
-                    <div class="w3-clear"></div>
-                    <h4>Personnel</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-panel">
-            <div class="w3-row-padding" style="margin:0 -16px">
-                <div class="w3-third">
-                    <h5>Day</h5>
-                    <img src="/w3images/region.jpg" style="width:100%" alt="Google Regional Map">
-                </div>
-                <div class="w3-twothird">
-                    <h5>New</h5>
-                    <table class="w3-table w3-striped w3-white">
-                        <tr>
-                            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                            <td>Aircraft.</td>
-                            <td><i>+{{equipment.newAircraft}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-                            <td>Helicopter.</td>
-                            <td><i>+{{equipment.newHelicopter}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
-                            <td>Tank.</td>
-                            <td><i>+{{equipment.newtank}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-                            <td>APC.</td>
-                            <td><i>+{{equipment.newApc}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-                            <td>Artillery.</td>
-                            <td><i>+{{equipment.newArtillery}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-                            <td>MRL.</td>
-                            <td><i>+{{equipment.newMrl}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-                            <td>Drones.</td>
-                            <td><i>+{{equipment.newDrone}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-                            <td>Ship.</td>
-                            <td><i>+{{equipment.newShip}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-                            <td>Anti Aircraft.</td>
-                            <td><i>+{{equipment.newAntiAircraft}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-                            <td>Special Equipment.</td>
-                            <td><i>+{{equipment.newSpecialEquipment}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-                            <td>Vehicles.</td>
-                            <td><i>+{{equipment.newVehicles}}</i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-                            <td>Personnel.</td>
-                            <td><i>+{{personnel.newPersonnel}}</i></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <br>
+    <!-- Image Header -->
+    <div class="w3-display-container w3-animate-opacity">
+        <img src="https://www.eui.eu/Content-Types-Assets/Uploads/General/national-flag-of-ukraine.x0dda0518.jpg?w=1920&h=1080"
+            alt="boat" style="width:100%;min-height:350px;max-height:600px;">
     </div>
-    <!-- End page content -->
+
+    <!-- Team Container -->
+    <div class="w3-container w3-padding-64 w3-center" id="team">
+        <h2>{{this.personnel.day}} День</h2>
+        <p>Протягом 2022-02-24 - {{this.personnel.date}}:</p>
+
+        <div class="w3-row"><br>
+
+            <div class="w3-quarter">
+                <img src="../assets/orc.jpg" alt="Orcs" title="Orcs" style="width:45%"
+                    class="w3-circle w3-hover-opacity">
+                <h3>{{personnel.personnel}}</h3>
+                <p>+{{personnel.newPersonnel}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/aircraft.jpg" alt="Aircraft" title="Aircraft" style="width:45%"
+                    class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.aircraft}}</h3>
+                <p>+{{equipment.newAircraft}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/helikopter.jpg" alt="Helicopter" title="Helicopter" style="width:45%"
+                    class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.helicopter}}</h3>
+                <p>+{{equipment.newHelicopter}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/tank.jpg" alt="Tank" title="Tank" style="width:45%"
+                    class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.tank}}</h3>
+                <p>+{{equipment.newtank}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/apc.jpg" alt="Armoured personnel carrier" title="Armoured personnel carrier"
+                    style="width:45%" class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.apc}}</h3>
+                <p>+{{equipment.newApc}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/artillery.jpg" alt="Field artillery" title="Field artillery" style="width:45%"
+                    class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.artillery}}</h3>
+                <p>+{{equipment.newArtillery}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/mrl.jpg" alt="Multiple rocket launcher" title="Multiple rocket launcher"
+                    style="width:45%" class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.mrl}}</h3>
+                <p>+{{equipment.newMrl}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/drone.jpg" alt="Drone" title="Drone" style="width:45%"
+                    class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.drone}}</h3>
+                <p>+{{equipment.newDrone}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/ship.jpg" alt="Naval ship" title="Naval ship" style="width:45%"
+                    class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.ship}}</h3>
+                <p>+{{equipment.newShip}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/antiAircraft.jpg" alt="Anti-aircraft warfare" title="Anti-aircraft warfare"
+                    style="width:45%" class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.antiAircraft}}</h3>
+                <p>+{{equipment.newAntiAircraft}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/specialEquipment.jpg" alt="Special equipment" title="Special equipment"
+                    style="width:45%" class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.specialEquipment}}</h3>
+                <p>+{{equipment.newSpecialEquipment}}</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="../assets/vehicles.jpg" alt="Vehicles and fuel tanks" title="Vehicles and fuel tanks"
+                    style="width:45%" class="w3-circle w3-hover-opacity">
+                <h3>{{equipment.vehicles}}</h3>
+                <p>+{{equipment.newVehicles}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+        <h4>Follow Us</h4>
+        <a class="w3-button w3-large w3-teal" href="https://www.facebook.com/oleksandr.bondar.37" title="Facebook"><i
+                class="fa fa-facebook"></i></a>
+        <a class="w3-button w3-large w3-teal" href="https://twitter.com/bondaole" title="Twitter"><i
+                class="fa fa-twitter"></i></a>
+        <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/oleksandr-bondar/" title="Linkedin"><i
+                class="fa fa-linkedin"></i></a>
+
+        <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+            <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+            <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+                    <i class="fa fa-chevron-circle-up"></i></span></a>
+        </div>
+    </footer>
+
 </body>
 
 </html>
