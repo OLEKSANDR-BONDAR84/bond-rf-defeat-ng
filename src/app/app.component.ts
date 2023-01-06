@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 
 const HOST_CORS_PROXY = "https://bond-cors-proxy.herokuapp.com/v1";
-const HTTP_PERSONNEL_DATA = "https://raw.githubusercontent.com/PetroIvaniuk/2022-Ukraine-Russia-War-Dataset/main/data/russia_losses_personnel.json";
-const HTTP_EQUIPMENT_DATA = "https://raw.githubusercontent.com/PetroIvaniuk/2022-Ukraine-Russia-War-Dataset/main/data/russia_losses_equipment.json";
+const HOST_NAME = "https://raw.githubusercontent.com/PetroIvaniuk/2022-Ukraine-Russia-War-Dataset/main/data/"
+const HTTP_PERSONNEL_DATA = HOST_NAME + "russia_losses_personnel.json";
+const HTTP_EQUIPMENT_DATA = HOST_NAME + "russia_losses_equipment.json";
 
 export interface Personnel {
   date: string;
@@ -54,6 +55,12 @@ export class AppComponent implements OnInit {
   equipment = {} as Equipment
 
   ngOnInit(): void {
+    if (!isOlder()) {
+      this.personnel = JSON.parse(String(localStorage.getItem("personnel")))
+      this.equipment = JSON.parse(String(localStorage.getItem("equipment")))
+      return
+    }
+
     this.httpClient.get(HOST_CORS_PROXY,
       {
         headers: new HttpHeaders({ url: HTTP_PERSONNEL_DATA })
@@ -67,6 +74,8 @@ export class AppComponent implements OnInit {
             this.personnel.day = Number(data[data.length - 1].day);
             this.personnel.personnel = Number(data[data.length - 1].personnel);
             this.personnel.newPersonnel = Number(data[data.length - 1].personnel) - Number(data[data.length - 2].personnel);
+            localStorage.setItem("date", this.personnel.date)
+            localStorage.setItem("personnel", JSON.stringify(this.personnel))
           }
         }
       });
@@ -106,8 +115,16 @@ export class AppComponent implements OnInit {
             this.equipment.newVehicles = Number(data[data.length - 1]["vehicles and fuel tanks"]) - Number(data[data.length - 2]["vehicles and fuel tanks"]);
             this.equipment.cruiseMissiles = data[data.length - 1].cruiseMissiles;
             this.equipment.newCruiseMissiles = Number(data[data.length - 1].cruiseMissiles) - Number(data[data.length - 2].cruiseMissiles);
+            localStorage.setItem("equipment", JSON.stringify(this.equipment))
           }
         }
       });
   }
+}
+
+function isOlder() {
+  if (localStorage.getItem("date") == null || (new Date()).getDate() > (new Date(String(localStorage.getItem("date"))).getDate())) {
+    return true
+  }
+  return false
 }
