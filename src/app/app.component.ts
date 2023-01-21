@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 
-const HOST_CORS_PROXY = "https://bond-cors-proxy.herokuapp.com/v1";
+const HOST_CORS_PROXY = "https://bond-cors-proxy.up.railway.app/v1";
 const HOST_NAME = "https://raw.githubusercontent.com/PetroIvaniuk/2022-Ukraine-Russia-War-Dataset/main/data/"
 const HTTP_PERSONNEL_DATA = HOST_NAME + "russia_losses_personnel.json";
 const HTTP_EQUIPMENT_DATA = HOST_NAME + "russia_losses_equipment.json";
